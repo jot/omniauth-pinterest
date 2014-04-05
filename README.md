@@ -1,3 +1,5 @@
+NOTE: Unfortunately the API this library was created for never really existed. It was built against some API documentation that I think they accidentally released for about a week.
+
 # OmniAuth Pinterest
 
 This is the unofficial OmniAuth strategy for authenticating to Pinterest. To
