@@ -2,11 +2,12 @@
 require File.expand_path('../lib/omniauth-pinterest/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Jonathan Markwell"]
-  gem.email         = ["jonathan.markwell@gmail.com"]
+  gem.authors       = ["Jonathan Markwell", "Niels Richter"]
+  gem.email         = ["jonathan.markwell@gmail.com", "niels@endil.de"]
   gem.description   = %q{OmniAuth strategy for Pinterest.}
   gem.summary       = %q{OmniAuth strategy for Pinterest.}
   gem.homepage      = "https://github.com/jot/omniauth-pinterest"
+  gem.license       = 'MIT'
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
@@ -19,8 +20,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'omniauth-oauth2', '~> 1.0'
 
   gem.add_development_dependency 'rspec', '~> 2.7'
-  gem.add_development_dependency 'rack-test'
-  gem.add_development_dependency 'webmock'
-  gem.add_development_dependency 'simplecov'
-
+  gem.add_development_dependency 'rack-test', '~> 0'
+  gem.add_development_dependency 'webmock', '~> 0'
+  gem.add_development_dependency 'simplecov', '~> 0'
 end
