@@ -10,7 +10,7 @@ module OmniAuth
       }
 
       def request_phase
-        options[:scope] ||= 'read'
+        options[:scope] ||= 'read_public'
         options[:response_type] ||= 'code'
         super
       end
