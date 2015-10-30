@@ -21,7 +21,7 @@ module OmniAuth
       info { raw_info }
 
       def raw_info
-        @raw_info ||= access_token.get('/v1/me/', params: { fields: options[:fields] }).parsed['data']
+        @raw_info ||= access_token.get('/v1/me/', params: { fields: options.fields }).parsed['data']
       end
 
     end
