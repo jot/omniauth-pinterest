@@ -23,6 +23,10 @@ module OmniAuth
         @raw_info ||= access_token.get('/v1/me/').parsed['data']
       end
 
+      def ssl?
+        true
+      end
+
     end
   end
 end
