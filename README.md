@@ -39,7 +39,7 @@ Here's an example authentication hash available in ```request.env['omniauth.auth
   :info => {
     :id => "1234",
     :url => "https://www.pinterest.com/jane_doe/",
-    :first_name: "Jane"
+    :first_name => "Jane",
     :last_name => "Doe"
   }
 }
