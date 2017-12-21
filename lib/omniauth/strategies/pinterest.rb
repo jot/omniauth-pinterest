@@ -18,6 +18,14 @@ module OmniAuth
       uid { raw_info['id'] }
 
       info { raw_info }
+      
+      def authorize_params
+        super.tap do |params|
+          %w[redirect_uri].each do |v| 
+            params[:redirect_uri] = request.params[v] if request.params[v]
+          end 
+        end 
+      end 
 
       def raw_info
         fields = 'first_name,id,last_name,url,account_type,username,bio,image'
