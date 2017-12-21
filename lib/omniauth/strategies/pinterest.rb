@@ -20,9 +20,9 @@ module OmniAuth
       info { raw_info }
 
       def raw_info
-        @raw_info ||= access_token.get('/v1/me/').parsed['data']
+        fields = 'first_name,id,last_name,url,account_type,username,bio,image'
+        @raw_info ||= access_token.get("/v1/me/?fields=#{fields}").parsed['data']
       end
-
     end
   end
 end
