@@ -30,7 +30,7 @@ module OmniAuth
 
       def raw_info
         fields = 'first_name,id,last_name,url,account_type,username,bio,image'
-        @raw_info ||= access_token.get("/v1/me/?fields=#{fields}").parsed['data']
+        @raw_info ||= access_token.get("/v1/me/?fields=#{fields}", {:mode => :query, :param_name => :access_token}).parsed['data']
       end
 
       def ssl?
