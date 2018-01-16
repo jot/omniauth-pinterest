@@ -6,7 +6,13 @@ module OmniAuth
       option :client_options, {
         :site => 'https://api.pinterest.com/',
         :authorize_url => 'https://api.pinterest.com/oauth/',
-        :token_url => 'https://api.pinterest.com/v1/oauth/token'
+        :token_url => 'https://api.pinterest.com/v1/oauth/token',
+        :auth_scheme => 'request_body'
+      }
+      
+      option :auth_token_params, {
+        :mode => :query,
+        :param_name => :access_token
       }
 
       def request_phase
